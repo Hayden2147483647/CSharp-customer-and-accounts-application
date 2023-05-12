@@ -8,7 +8,7 @@ namespace BIT706_A2_PartA
 {
     internal class Controller
     {
-        Customer customer;
+
         public List<Customer> allCustomers = new List<Customer>();
 
         public void addCustomer(int id, string name)
@@ -16,22 +16,15 @@ namespace BIT706_A2_PartA
             allCustomers.Add(new Customer(id, name));
         }
 
-        public void removeCustomer(int id)
+        public void removeCustomer(Customer cust)
         {
-            if (customer.getId() == id)
-            {
-                allCustomers.Remove(customer);
-            }
-            else
-            {
-                throw new Exception();
-            }
+            allCustomers.Remove(cust);
         }
 
-        public void editCustomer(Customer cust)
+        public void editCustomer(Customer cust, int id, string name)
         {
-            cust.setId(customer.getId());
-            cust.setName(customer.getName());
+            cust.setId(id);
+            cust.setName(name);
             allCustomers.Append(cust);
         }
     }

@@ -12,6 +12,7 @@ namespace BIT706_A2_PartA
 {
     public partial class Main : Form
     {
+        private Controller control;
         public Main()
         {
             InitializeComponent();
@@ -20,6 +21,34 @@ namespace BIT706_A2_PartA
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void testAddCustomerButton_Click(object sender, EventArgs e)
+        {
+            control.addCustomer(int.Parse(testIDInput.Text.ToString()), testName.Text.ToString());
+            //Updates and displays all customers in the list to the list box
+            testAllUserslistBox.Text = control.allCustomers.ToString();
+        }
+
+        private void testDeleteCustomerButton_Click(object sender, EventArgs e)
+        {
+            Customer cust;
+            cust = testAllUserslistBox.SelectedItem as Customer;
+            //Don't know if this will work or not
+            //TODO: Test to see
+            control.removeCustomer(cust);
+            //Updates and displays all customers in the list to the list box
+            testAllUserslistBox.Text = control.allCustomers.ToString();
+        }
+
+        private void testEditCustomerButton_Click(object sender, EventArgs e)
+        {
+            Customer cust;
+            cust = testAllUserslistBox.SelectedItem as Customer;
+            //TODO: Also need to test the edit
+            control.editCustomer(cust, int.Parse(testIDInput.Text.ToString()), testName.Text.ToString());
+            //Updates and displays all customers in the list to the list box
+            testAllUserslistBox.Text = control.allCustomers.ToString();
         }
     }
 }
