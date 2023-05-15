@@ -1,0 +1,11 @@
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\bin\Debug\BIT706-A2-PartA.exe.config
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\bin\Debug\BIT706-A2-PartA.exe
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\bin\Debug\BIT706-A2-PartA.pdb
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.csproj.AssemblyReference.cache
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.csproj.SuggestedBindingRedirects.cache
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706_A2_PartA.Main.resources
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706_A2_PartA.Properties.Resources.resources
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.csproj.GenerateResource.cache
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.csproj.CoreCompileInputs.cache
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.exe
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.pdb

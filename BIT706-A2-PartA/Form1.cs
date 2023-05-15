@@ -12,7 +12,7 @@ namespace BIT706_A2_PartA
 {
     public partial class Main : Form
     {
-        private Controller control;
+        private Controller control = new Controller();
         public Main()
         {
             InitializeComponent();
@@ -25,9 +25,16 @@ namespace BIT706_A2_PartA
 
         private void testAddCustomerButton_Click(object sender, EventArgs e)
         {
-            control.addCustomer(int.Parse(testIDInput.Text.ToString()), testName.Text.ToString());
+            try
+            {
+                control.addCustomer(int.Parse(testIDInput.Text), testName.Text.ToString());
+            }
+            catch (System.NullReferenceException)
+            {
+                Console.WriteLine("Didn't work");
+            }
             //Updates and displays all customers in the list to the list box
-            testAllUserslistBox.Text = control.allCustomers.ToString();
+            testAllUserslistBox.Text = control.allCustomers.ToString(); 
         }
 
         private void testDeleteCustomerButton_Click(object sender, EventArgs e)
