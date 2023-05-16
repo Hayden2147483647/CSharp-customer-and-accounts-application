@@ -12,7 +12,10 @@ namespace BIT706_A2_PartA
 {
     public partial class Main : Form
     {
-        private Controller control = new Controller();
+        static Controller control = new Controller();
+        static int intCheck;
+        private bool editButtonClicked = false;
+
         public Main()
         {
             InitializeComponent();
@@ -23,39 +26,88 @@ namespace BIT706_A2_PartA
 
         }
 
-        private void testAddCustomerButton_Click(object sender, EventArgs e)
+        private void addCustomerButton_Click(object sender, EventArgs e)
         {
+            editButtonClicked = false;
             try
             {
-                control.addCustomer(int.Parse(testIDInput.Text), testName.Text.ToString());
+                if (idInput.Text.Length == 0 || nameInput.Text.Length == 0)
+                {
+                    MessageBox.Show("Please make sure both inputs are not blank");
+                }
+                else if (!int.TryParse(idInput.Text, out intCheck))
+                {
+                    MessageBox.Show("Please input a whole number into the ID input");
+                }
+                else
+                {
+                    Customer customerInput = control.addCustomer(int.Parse(idInput.Text), nameInput.Text.ToString());
+                    allCustomerslistBox.Items.Add(control.customerString(customerInput));
+                    idInput.Text = "";
+                    nameInput.Text = "";
+                }
             }
             catch (System.NullReferenceException)
             {
                 Console.WriteLine("Didn't work");
             }
-            //Updates and displays all customers in the list to the list box
-            testAllUserslistBox.Text = control.allCustomers.ToString(); 
         }
 
-        private void testDeleteCustomerButton_Click(object sender, EventArgs e)
+        private void deleteCustomerButton_Click(object sender, EventArgs e)
         {
             Customer cust;
-            cust = testAllUserslistBox.SelectedItem as Customer;
-            //Don't know if this will work or not
-            //TODO: Test to see
+            cust = control.allCustomers[allCustomerslistBox.SelectedIndex];
             control.removeCustomer(cust);
             //Updates and displays all customers in the list to the list box
-            testAllUserslistBox.Text = control.allCustomers.ToString();
+            allCustomerslistBox.Items.Remove(control.customerString(cust));
+            editButtonClicked = false;
         }
 
-        private void testEditCustomerButton_Click(object sender, EventArgs e)
+        private void editCustomerButton_Click(object sender, EventArgs e)
         {
             Customer cust;
-            cust = testAllUserslistBox.SelectedItem as Customer;
-            //TODO: Also need to test the edit
-            control.editCustomer(cust, int.Parse(testIDInput.Text.ToString()), testName.Text.ToString());
-            //Updates and displays all customers in the list to the list box
-            testAllUserslistBox.Text = control.allCustomers.ToString();
+            cust = control.allCustomers[allCustomerslistBox.SelectedIndex];
+            if (idInput.Text.Length == 0 || nameInput.Text.Length == 0)
+            {
+                MessageBox.Show("Please make sure both inputs are not blank");
+            }
+            else if (!int.TryParse(idInput.Text, out intCheck))
+            {
+                MessageBox.Show("Please input a whole number into the ID input");
+            }
+            else
+            {
+                control.editCustomer(cust, int.Parse(idInput.Text.ToString()), nameInput.Text.ToString());
+                editButtonClicked = true;
+                //Updates and displays all customers in the list to the list box
+                allCustomerslistBox.Items[allCustomerslistBox.SelectedIndex] = control.customerString(cust);
+            }
+            editButtonClicked = false;
+        }
+
+        private void testAllUserslistBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Customer custom;
+            //throw exception here for selected index is out of range, since it was deleted
+            if (allCustomerslistBox.SelectedIndex == -1)
+            {
+                if (editButtonClicked == true)
+                {
+                    MessageBox.Show("Customer Edited Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Customer Deleted");
+                    idInput.Text = "";
+                    nameInput.Text = "";
+                }
+            }
+            else
+            {
+                custom = control.allCustomers[allCustomerslistBox.SelectedIndex];
+                idInput.Text = custom.getId().ToString();
+                nameInput.Text = custom.getName();
+            }
         }
     }
 }

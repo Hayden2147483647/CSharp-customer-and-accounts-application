@@ -9,3 +9,4 @@ C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment
 C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.csproj.CoreCompileInputs.cache
 C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.exe
 C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706-A2-PartA.pdb
+C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #2\BIT706-A2-PartA\BIT706-A2-PartA\obj\Debug\BIT706_A2_PartA.Main_form.resources

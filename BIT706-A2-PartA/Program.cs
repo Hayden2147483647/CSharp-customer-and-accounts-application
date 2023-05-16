@@ -16,7 +16,7 @@ namespace BIT706_A2_PartA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Main_form());
         }
     }
 }
