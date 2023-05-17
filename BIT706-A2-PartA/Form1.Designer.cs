@@ -37,6 +37,7 @@
             this.testEditCustomerButton = new System.Windows.Forms.Button();
             this.testDeleteCustomerButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.helpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // allCustomerslistBox
@@ -103,7 +104,7 @@
             this.testEditCustomerButton.Name = "testEditCustomerButton";
             this.testEditCustomerButton.Size = new System.Drawing.Size(109, 46);
             this.testEditCustomerButton.TabIndex = 6;
-            this.testEditCustomerButton.Text = "Edit Customer";
+            this.testEditCustomerButton.Text = "Edit Selected Customer";
             this.testEditCustomerButton.UseVisualStyleBackColor = true;
             this.testEditCustomerButton.Click += new System.EventHandler(this.editCustomerButton_Click);
             // 
@@ -114,7 +115,7 @@
             this.testDeleteCustomerButton.Name = "testDeleteCustomerButton";
             this.testDeleteCustomerButton.Size = new System.Drawing.Size(109, 46);
             this.testDeleteCustomerButton.TabIndex = 7;
-            this.testDeleteCustomerButton.Text = "Delete Customer";
+            this.testDeleteCustomerButton.Text = "Delete Selected Customer";
             this.testDeleteCustomerButton.UseVisualStyleBackColor = true;
             this.testDeleteCustomerButton.Click += new System.EventHandler(this.deleteCustomerButton_Click);
             // 
@@ -129,12 +130,24 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "MyBank";
             // 
+            // helpButton
+            // 
+            this.helpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpButton.Location = new System.Drawing.Point(546, 373);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(95, 40);
+            this.helpButton.TabIndex = 9;
+            this.helpButton.Text = "Help";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(653, 425);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.testDeleteCustomerButton);
             this.Controls.Add(this.testEditCustomerButton);
@@ -166,6 +179,7 @@
         private System.Windows.Forms.Button testEditCustomerButton;
         private System.Windows.Forms.Button testDeleteCustomerButton;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button helpButton;
     }
 }
 
