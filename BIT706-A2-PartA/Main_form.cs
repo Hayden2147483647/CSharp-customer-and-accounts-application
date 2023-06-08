@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BIT706_Assignment_1_5062155;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,18 @@ namespace BIT706_A2_PartA
 {
     public partial class Main_form : Form
     {
+        public static Controller controller = new Controller();
+
         public Main_form()
         {
             InitializeComponent();
+            
         }
 
         private void buttonToCustomers_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
             this.Hide();
-            main.FormClosed += (s, args) => this.Close();
-            main.Show();
+            controller.allCustomerGUI();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BIT706_Assignment_1_5062155;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,34 @@ using System.Windows.Forms;
 
 namespace BIT706_A2_PartA
 {
-    public partial class Main : Form
+    public partial class AllCustomers : Form
     {
-        static Controller control = new Controller();
+        private static Controller control = new Controller();
         static int intCheck;
         private bool editButtonClicked = false;
+        public List<Customer> allCustomersList = new List<Customer>();
+        public static Customer selectedCustomer;
 
-        public Main()
+        public AllCustomers()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void addCustomer(Customer customer)
         {
-
+            allCustomersList.Add(customer);
         }
+
+        public void removeCustomer(Customer customer)
+        {
+            allCustomersList.Remove(customer);
+        }
+
+        public void updateCustomer(Customer customer)
+        {
+            allCustomersList.Append(customer);
+        }
+
 
         private void addCustomerButton_Click(object sender, EventArgs e)
         {
@@ -55,18 +69,25 @@ namespace BIT706_A2_PartA
 
         private void deleteCustomerButton_Click(object sender, EventArgs e)
         {
-            Customer cust;
-            cust = control.allCustomers[allCustomerslistBox.SelectedIndex];
-            control.removeCustomer(cust);
-            //Updates and displays all customers in the list to the list box
-            allCustomerslistBox.Items.Remove(control.customerString(cust));
-            editButtonClicked = false;
+            if (allCustomerslistBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please sselect a customer to delete first");
+            }
+            else
+            {
+                Customer cust;
+                cust = allCustomersList[allCustomerslistBox.SelectedIndex];
+                control.removeCustomer(cust);
+                //Updates and displays all customers in the list to the list box
+                allCustomerslistBox.Items.Remove(control.customerString(cust));
+                editButtonClicked = false;
+            }
         }
 
         private void editCustomerButton_Click(object sender, EventArgs e)
         {
             Customer cust;
-            cust = control.allCustomers[allCustomerslistBox.SelectedIndex];
+            cust = allCustomersList[allCustomerslistBox.SelectedIndex];
             if (idInput.Text.Length == 0 || nameInput.Text.Length == 0)
             {
                 MessageBox.Show("Please make sure both inputs are not blank");
@@ -97,16 +118,17 @@ namespace BIT706_A2_PartA
                 }
                 else
                 {
-                    MessageBox.Show("Customer Deleted");
+                    MessageBox.Show("No Customer present");
                     idInput.Text = "";
                     nameInput.Text = "";
                 }
             }
             else
             {
-                custom = control.allCustomers[allCustomerslistBox.SelectedIndex];
+                custom = allCustomersList[allCustomerslistBox.SelectedIndex];
                 idInput.Text = custom.getId().ToString();
                 nameInput.Text = custom.getName();
+                selectedCustomer = allCustomersList[allCustomerslistBox.SelectedIndex];
             }
         }
 
@@ -129,6 +151,20 @@ namespace BIT706_A2_PartA
                 {
                     DialogResult result3 = MessageBox.Show(message3, title, button);
                 }
+            }
+        }
+
+        private void manageAccountsButton_Click(object sender, EventArgs e)
+        {
+            if (allCustomerslistBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a customer first");
+            }
+            else
+            {
+                control.getAllAccount().customerInfoLabel.Text = selectedCustomer.getInfo();
+                this.Visible = false;
+                control.allAccountsGUI();
             }
         }
     }

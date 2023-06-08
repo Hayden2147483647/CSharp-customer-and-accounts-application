@@ -1,6 +1,6 @@
 ﻿namespace BIT706_A2_PartA
 {
-    partial class Main
+    partial class AllCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,7 @@
             this.testDeleteCustomerButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.helpButton = new System.Windows.Forms.Button();
+            this.manageAccountsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // allCustomerslistBox
@@ -99,7 +100,7 @@
             // 
             // testEditCustomerButton
             // 
-            this.testEditCustomerButton.Location = new System.Drawing.Point(316, 195);
+            this.testEditCustomerButton.Location = new System.Drawing.Point(316, 192);
             this.testEditCustomerButton.Margin = new System.Windows.Forms.Padding(2);
             this.testEditCustomerButton.Name = "testEditCustomerButton";
             this.testEditCustomerButton.Size = new System.Drawing.Size(109, 46);
@@ -110,7 +111,7 @@
             // 
             // testDeleteCustomerButton
             // 
-            this.testDeleteCustomerButton.Location = new System.Drawing.Point(316, 261);
+            this.testDeleteCustomerButton.Location = new System.Drawing.Point(316, 254);
             this.testDeleteCustomerButton.Margin = new System.Windows.Forms.Padding(2);
             this.testDeleteCustomerButton.Name = "testDeleteCustomerButton";
             this.testDeleteCustomerButton.Size = new System.Drawing.Size(109, 46);
@@ -141,12 +142,23 @@
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
+            // manageAccountsButton
+            // 
+            this.manageAccountsButton.Location = new System.Drawing.Point(316, 317);
+            this.manageAccountsButton.Name = "manageAccountsButton";
+            this.manageAccountsButton.Size = new System.Drawing.Size(109, 46);
+            this.manageAccountsButton.TabIndex = 10;
+            this.manageAccountsButton.Text = "Manage selected Customer Accounts";
+            this.manageAccountsButton.UseVisualStyleBackColor = true;
+            this.manageAccountsButton.Click += new System.EventHandler(this.manageAccountsButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(653, 425);
+            this.Controls.Add(this.manageAccountsButton);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.testDeleteCustomerButton);
@@ -162,7 +174,6 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Customers";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +191,7 @@
         private System.Windows.Forms.Button testDeleteCustomerButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Button manageAccountsButton;
     }
 }
 
