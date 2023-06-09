@@ -15,6 +15,7 @@ namespace BIT706_A2_PartA
         public static AllCustomers allCustomers = new AllCustomers();
         public static AllAccounts allAccounts = new AllAccounts();
         public static NewAccount newAccount = new NewAccount();
+        public static Transfer transfer = new Transfer();
         private int id = 0;
 
         public Customer addCustomer(int id, string name)
@@ -72,9 +73,9 @@ namespace BIT706_A2_PartA
             return cust.getId().ToString() + "\t" + cust.getName();
         }
 
-        public string accountString(Account account)
+        public string accountString(List<Account> account, int element)
         {
-            return account.getAccountName() + "\t" + account.getBalanceString();
+            return account.ElementAt(element).getAccountName() + "\t" + account.ElementAt(element).getAccountID() + "\t" + account.ElementAt(element).getBalanceString();
         }
 
         public AllAccounts getAllAccount()
@@ -95,6 +96,11 @@ namespace BIT706_A2_PartA
         public void newAccountGUI()
         {
             newAccount.Visible = true;
+        }
+
+        public void transferGUI()
+        {
+            transfer.Visible = true;
         }
     }
 }

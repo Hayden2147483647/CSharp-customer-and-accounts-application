@@ -40,9 +40,14 @@ namespace BIT706_Assignment_1_5062155
             return "$" + fees.ToString();
         }
 
+        public override String getAccountName()
+        {
+            return investName;
+        }
+
         public override String getAccountInfo()
         {
-            return "Investment " + getAccountID().ToString() + ";\n" + "Interest Rate " + calculateIntrest() + ";\n" + "Fee " + calculateFees() + ";\n" + "Balance " + getBalanceString();
+            return investName + " " + getAccountID().ToString() + ";\n" + "Interest Rate " + calculateIntrest() + ";\n" + "Fee " + calculateFees() + ";\n" + "Balance " + getBalanceString();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace BIT706_Assignment_1_5062155
             balance_amount = balance;
         }
 
-        public String getAccountName()
+        public virtual String getAccountName()
         {
             return accountName;
         }
@@ -45,7 +45,7 @@ namespace BIT706_Assignment_1_5062155
 
         public virtual String getAccountInfo()
         {
-            return "Everyday " + getAccountID().ToString() + "; " + "Balance " + getBalance().ToString();
+            return accountName + " " + getAccountID().ToString() + "; " + "Balance " + getBalanceString();
         }
     }
 }

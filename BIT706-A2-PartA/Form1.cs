@@ -165,6 +165,11 @@ namespace BIT706_A2_PartA
                 control.getAllAccount().customerInfoLabel.Text = selectedCustomer.getInfo();
                 this.Visible = false;
                 control.allAccountsGUI();
+                for (int i = 0; i < selectedCustomer.customerAccountsList.Count; i++)
+                {
+                    control.getAllAccount().allAccountslistBox.Items.Add(selectedCustomer.customerAccountsList.ElementAt(i).getAccountInfo());
+                }
+                
             }
         }
     }

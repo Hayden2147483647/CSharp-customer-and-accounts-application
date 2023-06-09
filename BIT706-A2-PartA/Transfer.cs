@@ -12,11 +12,10 @@ namespace BIT706_A2_PartA
 {
     public partial class Transfer : Form
     {
-        private Controller controller;
-        public Transfer(Controller controller)
+        private static Controller controller = new Controller();
+        public Transfer()
         {
             InitializeComponent();
-            this.controller = controller;
         }
 
         private void transferAmountTextBox_TextChanged(object sender, EventArgs e)

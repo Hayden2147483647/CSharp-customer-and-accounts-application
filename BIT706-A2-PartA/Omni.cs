@@ -53,9 +53,15 @@ namespace BIT706_Assignment_1_5062155
             return "$" + fees.ToString();
         }
 
+        public override String getAccountName()
+        {
+            return omniName;
+        }
+
+
         public override String getAccountInfo()
         {
-            return "Omni " + getAccountID().ToString() + ";\n" + "Interest Rate " + calculateIntrest() + ";\n" + "Overdraft Limit " + getOverdraft() + ";\n" + "Fee " + calculateFees() + ";\n" + "Balance $" + getBalanceString();
+            return omniName + " " + getAccountID().ToString() + ";\n" + "Interest Rate " + calculateIntrest() + ";\n" + "Overdraft Limit " + getOverdraft() + ";\n" + "Fee " + calculateFees() + ";\n" + "Balance $" + getBalanceString();
         }
     }
 }

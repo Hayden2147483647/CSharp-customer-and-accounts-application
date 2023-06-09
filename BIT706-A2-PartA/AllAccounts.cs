@@ -25,6 +25,9 @@ namespace BIT706_Assignment_1_5062155
         private TextBox depositWithdrawTextBox;
         private Label label2;
         private static Controller controller = new Controller();
+        private Label label3;
+        private Button setAccountsIntrestButton;
+        private TextBox intrestTextBox;
         private double doubleCheck;
 
         public AllAccounts()
@@ -55,6 +58,9 @@ namespace BIT706_Assignment_1_5062155
             this.backToAllCustomersButton = new System.Windows.Forms.Button();
             this.depositWithdrawTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.setAccountsIntrestButton = new System.Windows.Forms.Button();
+            this.intrestTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // allAccountslistBox
@@ -139,7 +145,7 @@ namespace BIT706_Assignment_1_5062155
             // 
             // depositWithdrawTextBox
             // 
-            this.depositWithdrawTextBox.Location = new System.Drawing.Point(417, 220);
+            this.depositWithdrawTextBox.Location = new System.Drawing.Point(401, 197);
             this.depositWithdrawTextBox.Name = "depositWithdrawTextBox";
             this.depositWithdrawTextBox.Size = new System.Drawing.Size(164, 20);
             this.depositWithdrawTextBox.TabIndex = 9;
@@ -147,16 +153,44 @@ namespace BIT706_Assignment_1_5062155
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(417, 201);
+            this.label2.Location = new System.Drawing.Point(401, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Deposit/Withdraw";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(269, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Calculate/Add Intrest";
+            // 
+            // setAccountsIntrestButton
+            // 
+            this.setAccountsIntrestButton.Location = new System.Drawing.Point(272, 63);
+            this.setAccountsIntrestButton.Name = "setAccountsIntrestButton";
+            this.setAccountsIntrestButton.Size = new System.Drawing.Size(103, 38);
+            this.setAccountsIntrestButton.TabIndex = 13;
+            this.setAccountsIntrestButton.Text = "Set Selected Accounts Intrest";
+            this.setAccountsIntrestButton.UseVisualStyleBackColor = true;
+            // 
+            // intrestTextBox
+            // 
+            this.intrestTextBox.Location = new System.Drawing.Point(272, 37);
+            this.intrestTextBox.Name = "intrestTextBox";
+            this.intrestTextBox.Size = new System.Drawing.Size(103, 20);
+            this.intrestTextBox.TabIndex = 14;
+            // 
             // AllAccounts
             // 
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(625, 471);
+            this.ClientSize = new System.Drawing.Size(590, 439);
+            this.Controls.Add(this.intrestTextBox);
+            this.Controls.Add(this.setAccountsIntrestButton);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.depositWithdrawTextBox);
             this.Controls.Add(this.backToAllCustomersButton);
@@ -180,7 +214,14 @@ namespace BIT706_Assignment_1_5062155
 
         private void allAccountslistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (allAccountslistBox.SelectedIndex == -1)
+            {
+                intrestTextBox.Text = string.Empty;
+            }
+            else
+            {
+                //TODO: Select the account from the list and display its intrest
+            }
         }
 
         private void newAccountButton_Click(object sender, EventArgs e)
@@ -193,11 +234,14 @@ namespace BIT706_Assignment_1_5062155
         {
             this.Visible = false;
             controller.allCustomerGUI();
+            allAccountslistBox.Items.Clear();
+            depositWithdrawTextBox.Text = string.Empty;
         }
 
         private void transferButton_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            controller.transferGUI();
         }
 
         private void depositButton_Click(object sender, EventArgs e)
@@ -221,13 +265,34 @@ namespace BIT706_Assignment_1_5062155
             else
             {
                 controller.editAccountBalance(AllCustomers.selectedCustomer, AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex], double.Parse(depositWithdrawTextBox.Text));
-                allAccountslistBox.Items[allAccountslistBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex]);
+                allAccountslistBox.Items[allAccountslistBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, allAccountslistBox.SelectedIndex);
             }
         }
 
         private void withdrawButton_Click(object sender, EventArgs e)
         {
-
+            if (depositWithdrawTextBox.Text.Equals("") || depositWithdrawTextBox.Text.Length == 0)
+            {
+                MessageBox.Show("Please put in an amount first to\ndeposit or withdraw from the selected balance");
+            }
+            else if (allAccountslistBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an Account before you deposit");
+            }
+            else if (!double.TryParse(depositWithdrawTextBox.Text, out doubleCheck))
+            {
+                MessageBox.Show("Please input a valid number");
+            }
+            else if (double.Parse(depositWithdrawTextBox.Text) <= 0)
+            {
+                MessageBox.Show("Please input a positive number");
+            }
+            else
+            {
+                controller.editAccountBalance(AllCustomers.selectedCustomer, AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex], -double.Parse(depositWithdrawTextBox.Text));
+                allAccountslistBox.Items[allAccountslistBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList ,allAccountslistBox.SelectedIndex);
+            }
         }
+
     }
 }
