@@ -35,6 +35,13 @@ namespace BIT706_Assignment_1_5062155
             return intrest.ToString() + "%";
         }
 
+        public override double getInterest()
+        {
+            return intrest;
+        }
+
+        public override void setInterest(double interestSet) => this.Interest = interestSet;
+
         public String calculateFees()
         {
             return "$" + fees.ToString();
@@ -47,7 +54,7 @@ namespace BIT706_Assignment_1_5062155
 
         public override String getAccountInfo()
         {
-            return investName + " " + getAccountID().ToString() + ";\n" + "Interest Rate " + calculateIntrest() + ";\n" + "Fee " + calculateFees() + ";\n" + "Balance " + getBalanceString();
+            return investName + " " + getAccountID().ToString() + ";\n" + "Interest " + calculateIntrest() + ";Balance " + getBalanceString();
         }
     }
 }

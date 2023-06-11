@@ -9,6 +9,7 @@ namespace BIT706_Assignment_1_5062155
     public class Account
     {
         protected int account_id;
+        protected double everydayInterest = 0;
         protected double balance_amount;
         protected string accountName = "Everyday";
 
@@ -36,6 +37,16 @@ namespace BIT706_Assignment_1_5062155
         public virtual String getAccountName()
         {
             return accountName;
+        }
+
+        public virtual double getInterest() 
+        {
+            return everydayInterest;
+        }
+
+        public virtual void setInterest(double interestSet)
+        {
+            everydayInterest = interestSet * 0;
         }
 
         public String getBalanceString()

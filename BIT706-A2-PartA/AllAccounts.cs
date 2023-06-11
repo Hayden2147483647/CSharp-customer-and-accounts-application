@@ -176,6 +176,7 @@ namespace BIT706_Assignment_1_5062155
             this.setAccountsIntrestButton.TabIndex = 13;
             this.setAccountsIntrestButton.Text = "Set Selected Accounts Intrest";
             this.setAccountsIntrestButton.UseVisualStyleBackColor = true;
+            this.setAccountsIntrestButton.Click += new System.EventHandler(this.setAccountsIntrestButton_Click);
             // 
             // intrestTextBox
             // 
@@ -220,7 +221,8 @@ namespace BIT706_Assignment_1_5062155
             }
             else
             {
-                //TODO: Select the account from the list and display its intrest
+                //Selects the account from the list and display its intrest
+                intrestTextBox.Text = AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].getInterest().ToString();
             }
         }
 
@@ -242,6 +244,11 @@ namespace BIT706_Assignment_1_5062155
         {
             this.Visible = false;
             controller.transferGUI();
+            for (int i = 0; i < AllCustomers.selectedCustomer.customerAccountsList.Count; i++)
+            {
+                controller.getTransfer().transferFromListBox.Items.Add(AllCustomers.selectedCustomer.customerAccountsList.ElementAt(i).getAccountInfo());
+                controller.getTransfer().transferToListBox.Items.Add(AllCustomers.selectedCustomer.customerAccountsList.ElementAt(i).getAccountInfo());
+            }
         }
 
         private void depositButton_Click(object sender, EventArgs e)
@@ -294,5 +301,25 @@ namespace BIT706_Assignment_1_5062155
             }
         }
 
+        private void setAccountsIntrestButton_Click(object sender, EventArgs e)
+        {
+            if (intrestTextBox.Text.Equals("") || intrestTextBox.Text.Length == 0)
+            {
+                MessageBox.Show("Please put in an amount first to\nset the interest from the selected account");
+            }
+            else if (!double.TryParse(intrestTextBox.Text, out doubleCheck))
+            {
+                MessageBox.Show("Please input a valid number");
+            }
+            else if (double.Parse(intrestTextBox.Text) <= 0)
+            {
+                MessageBox.Show("Please input a positive number");
+            }
+            else
+            {
+                AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].setInterest(double.Parse(intrestTextBox.Text));
+                allAccountslistBox.Items[allAccountslistBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, allAccountslistBox.SelectedIndex);
+            }
+        }
     }
 }

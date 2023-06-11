@@ -90,7 +90,6 @@
             this.transferAmountTextBox.Name = "transferAmountTextBox";
             this.transferAmountTextBox.Size = new System.Drawing.Size(100, 20);
             this.transferAmountTextBox.TabIndex = 8;
-            this.transferAmountTextBox.TextChanged += new System.EventHandler(this.transferAmountTextBox_TextChanged);
             // 
             // confirmTransferButton
             // 
@@ -100,6 +99,7 @@
             this.confirmTransferButton.TabIndex = 9;
             this.confirmTransferButton.Text = "Transfer";
             this.confirmTransferButton.UseVisualStyleBackColor = true;
+            this.confirmTransferButton.Click += new System.EventHandler(this.confirmTransferButton_Click);
             // 
             // backFromTransferButton
             // 

@@ -47,7 +47,7 @@ namespace BIT706_A2_PartA
 
         public void editAccountBalance(Customer cust, Account acc, double balance)
         {
-            acc.setBalance(balance);
+            acc.setBalance(acc.getBalance() + balance);
             allAccounts.editAccount(cust, acc);
         }
 
@@ -75,7 +75,7 @@ namespace BIT706_A2_PartA
 
         public string accountString(List<Account> account, int element)
         {
-            return account.ElementAt(element).getAccountName() + "\t" + account.ElementAt(element).getAccountID() + "\t" + account.ElementAt(element).getBalanceString();
+            return account.ElementAt(element).getAccountName() + "\t" + account.ElementAt(element).getAccountID() + "\t" + account.ElementAt(element).getBalanceString() + "\t" + account.ElementAt(element).getInterest() + "%";
         }
 
         public AllAccounts getAllAccount()
@@ -83,24 +83,29 @@ namespace BIT706_A2_PartA
             return allAccounts;
         }
 
+        public Transfer getTransfer()
+        {
+            return transfer; 
+        }
+
         public void allCustomerGUI()
         {
-            allCustomers.Visible = true;
+            allCustomers.Show();
         }
 
         public void allAccountsGUI()
         {
-            allAccounts.Visible = true;
+            allAccounts.Show();
         }
 
         public void newAccountGUI()
         {
-            newAccount.Visible = true;
+            newAccount.Show();
         }
 
         public void transferGUI()
         {
-            transfer.Visible = true;
+            transfer.Show();
         }
     }
 }
