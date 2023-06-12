@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace BIT706_Assignment_1_5062155
 {
+    [Serializable()]
     public class Omni : Account
     {
        protected double interest;
@@ -68,7 +69,7 @@ namespace BIT706_Assignment_1_5062155
 
         public override String getAccountInfo()
         {
-            return omniName + " " + getAccountID().ToString() + ";\n" + "Interest " + calculateIntrest() + ";Balance $" + getBalanceString();
+            return omniName + " " + getAccountID().ToString() + ";\n" + "Interest " + calculateIntrest() + ";Balance " + getBalanceString();
         }
     }
 }

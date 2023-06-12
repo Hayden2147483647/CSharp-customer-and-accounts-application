@@ -129,6 +129,7 @@
             this.Name = "NewAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewAccount";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewAccount_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

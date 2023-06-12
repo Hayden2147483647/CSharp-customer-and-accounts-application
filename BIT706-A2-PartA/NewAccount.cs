@@ -49,5 +49,10 @@ namespace BIT706_A2_PartA
             this.Visible = false;
             controller.allAccountsGUI();
         }
+
+        private void NewAccount_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            controller.onClose();
+        }
     }
 }

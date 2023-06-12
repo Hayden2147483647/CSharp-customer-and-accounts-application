@@ -75,6 +75,8 @@
     <Compile Include="Omni.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialize.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="Transfer.cs">
       <SubType>Form</SubType>
     </Compile>

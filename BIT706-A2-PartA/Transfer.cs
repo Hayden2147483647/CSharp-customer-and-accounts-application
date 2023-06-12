@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,11 @@ namespace BIT706_A2_PartA
                 transferToListBox.Items[transferToListBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, transferToListBox.SelectedIndex);
                 transferFromListBox.Items[transferToListBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, transferToListBox.SelectedIndex);
             }
+        }
+
+        private void Transfer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            controller.onClose();
         }
     }
 }

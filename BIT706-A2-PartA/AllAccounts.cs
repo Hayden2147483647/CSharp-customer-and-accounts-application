@@ -35,11 +35,6 @@ namespace BIT706_Assignment_1_5062155
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         public void editAccount(Customer customer, Account acc)
         {
             customer.customerAccountsList.Append(acc);
@@ -207,7 +202,7 @@ namespace BIT706_Assignment_1_5062155
             this.Name = "AllAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Accounts";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AllAccounts_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +315,11 @@ namespace BIT706_Assignment_1_5062155
                 AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].setInterest(double.Parse(intrestTextBox.Text));
                 allAccountslistBox.Items[allAccountslistBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, allAccountslistBox.SelectedIndex);
             }
+        }
+
+        private void AllAccounts_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            controller.onClose();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BIT706_Assignment_1_5062155
 {
+    [Serializable()]
     public class Account
     {
         protected int account_id;

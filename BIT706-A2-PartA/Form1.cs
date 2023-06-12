@@ -45,19 +45,14 @@ namespace BIT706_A2_PartA
             editButtonClicked = false;
             try
             {
-                if (idInput.Text.Length == 0 || nameInput.Text.Length == 0)
+                if (nameInput.Text.Length == 0)
                 {
-                    MessageBox.Show("Please make sure both inputs are not blank");
-                }
-                else if (!int.TryParse(idInput.Text, out intCheck))
-                {
-                    MessageBox.Show("Please input a whole number into the ID input");
+                    MessageBox.Show("Please make sure Name input is not blank");
                 }
                 else
                 {
-                    Customer customerInput = control.addCustomer(int.Parse(idInput.Text), nameInput.Text.ToString());
+                    Customer customerInput = control.addCustomer(nameInput.Text.ToString());
                     allCustomerslistBox.Items.Add(control.customerString(customerInput));
-                    idInput.Text = "";
                     nameInput.Text = "";
                 }
             }
@@ -75,12 +70,20 @@ namespace BIT706_A2_PartA
             }
             else
             {
-                Customer cust;
-                cust = allCustomersList[allCustomerslistBox.SelectedIndex];
-                control.removeCustomer(cust);
-                //Updates and displays all customers in the list to the list box
-                allCustomerslistBox.Items.Remove(control.customerString(cust));
-                editButtonClicked = false;
+                try
+                {
+                    Customer cust;
+                    cust = allCustomersList[allCustomerslistBox.SelectedIndex];
+                    //Updates and displays all customers in the list to the list box
+                    allCustomerslistBox.Items.Remove(control.customerString(cust));
+                    control.removeCustomer(cust);
+                    editButtonClicked = false;
+                }
+                catch (ArgumentOutOfRangeException except)
+                {
+                    MessageBox.Show("No Customer present");
+                    Console.WriteLine(except.Message);
+                }
             }
         }
 
@@ -88,17 +91,13 @@ namespace BIT706_A2_PartA
         {
             Customer cust;
             cust = allCustomersList[allCustomerslistBox.SelectedIndex];
-            if (idInput.Text.Length == 0 || nameInput.Text.Length == 0)
+            if (nameInput.Text.Length == 0)
             {
-                MessageBox.Show("Please make sure both inputs are not blank");
-            }
-            else if (!int.TryParse(idInput.Text, out intCheck))
-            {
-                MessageBox.Show("Please input a whole number into the ID input");
+                MessageBox.Show("Please make sure Name input is not blank");
             }
             else
             {
-                control.editCustomer(cust, int.Parse(idInput.Text.ToString()), nameInput.Text.ToString());
+                control.editCustomer(cust, nameInput.Text.ToString());
                 editButtonClicked = true;
                 //Updates and displays all customers in the list to the list box
                 allCustomerslistBox.Items[allCustomerslistBox.SelectedIndex] = control.customerString(cust);
@@ -110,25 +109,31 @@ namespace BIT706_A2_PartA
         {
             Customer custom;
             //throw exception here for selected index is out of range, since it was deleted
-            if (allCustomerslistBox.SelectedIndex == -1)
+            try
             {
-                if (editButtonClicked == true)
+                if (allCustomerslistBox.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Customer Edited Successfully");
+                    if (editButtonClicked == true)
+                    {
+                        MessageBox.Show("Customer Edited Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Customer present");
+                        nameInput.Text = "";
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No Customer present");
-                    idInput.Text = "";
-                    nameInput.Text = "";
+                    custom = allCustomersList[allCustomerslistBox.SelectedIndex];
+                    nameInput.Text = custom.getName();
+                    selectedCustomer = allCustomersList[allCustomerslistBox.SelectedIndex];
                 }
             }
-            else
+            catch (ArgumentOutOfRangeException exc)
             {
-                custom = allCustomersList[allCustomerslistBox.SelectedIndex];
-                idInput.Text = custom.getId().ToString();
-                nameInput.Text = custom.getName();
-                selectedCustomer = allCustomersList[allCustomerslistBox.SelectedIndex];
+                MessageBox.Show("No Customers present");
+                Console.WriteLine(exc.Message);
             }
         }
 
@@ -171,6 +176,11 @@ namespace BIT706_A2_PartA
                 }
                 
             }
+        }
+
+        private void AllCustomers_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            control.onClose();
         }
     }
 }

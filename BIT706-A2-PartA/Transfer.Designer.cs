@@ -130,6 +130,7 @@
             this.Name = "Transfer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transfer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Transfer_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

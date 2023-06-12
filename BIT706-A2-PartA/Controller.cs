@@ -12,16 +12,19 @@ namespace BIT706_A2_PartA
 {
     public class Controller
     {
+        public static Main_form mainForm = new Main_form();
         public static AllCustomers allCustomers = new AllCustomers();
         public static AllAccounts allAccounts = new AllAccounts();
         public static NewAccount newAccount = new NewAccount();
         public static Transfer transfer = new Transfer();
-        private int id = 0;
+        public static Serialize serialize = new Serialize();
+        private int accID = 0;
+        public int custID = 1;
 
-        public Customer addCustomer(int id, string name)
+        public Customer addCustomer(string name)
         {
             Customer customer;
-            customer = new Customer(id, name);
+            customer = new Customer(this.custID++, name, false);
             allCustomers.addCustomer(customer);
             return customer;
         }
@@ -31,9 +34,8 @@ namespace BIT706_A2_PartA
             allCustomers.removeCustomer(cust);
         }
 
-        public Customer editCustomer(Customer cust, int id, string name)
+        public Customer editCustomer(Customer cust, string name)
         {
-            cust.setId(id);
             cust.setName(name);
             allCustomers.updateCustomer(cust);
             return cust;
@@ -41,7 +43,7 @@ namespace BIT706_A2_PartA
 
         public Account addAccount(double amount)
         {
-            Account account = new Account(this.id++, amount);
+            Account account = new Account(this.accID++, amount);
             return account;
         }
 
@@ -53,7 +55,7 @@ namespace BIT706_A2_PartA
 
         public Invest addInvest(double amount) 
         {
-            Invest invest = new Invest(this.id++, 0.00);
+            Invest invest = new Invest(this.accID++, 0.00);
             invest.Interest = 4; 
             invest.Fees = 0;
             return invest;
@@ -61,7 +63,7 @@ namespace BIT706_A2_PartA
 
         public Omni addOmni(double amount)
         {
-            Omni omni = new Omni(this.id++, 0.00);
+            Omni omni = new Omni(this.accID++, 0.00);
             omni.Interest = 4;
             omni.Fees = 0;
             omni.Overdraft = 0;
@@ -88,6 +90,16 @@ namespace BIT706_A2_PartA
             return transfer; 
         }
 
+        public AllCustomers getAllCustomers()
+        {
+            return allCustomers;
+        }
+
+        public Serialize getSerializer()
+        {
+            return serialize;
+        }
+
         public void allCustomerGUI()
         {
             allCustomers.Show();
@@ -106,6 +118,15 @@ namespace BIT706_A2_PartA
         public void transferGUI()
         {
             transfer.Show();
+        }
+        public void mainFormGUI()
+        {
+            mainForm.Show();
+        }
+        public void onClose()
+        {
+            serialize.serializing();
+            Environment.Exit(0);
         }
     }
 }

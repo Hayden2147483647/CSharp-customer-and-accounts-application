@@ -18,13 +18,23 @@ namespace BIT706_A2_PartA
         public Main_form()
         {
             InitializeComponent();
-            
         }
 
         private void buttonToCustomers_Click(object sender, EventArgs e)
         {
+            controller.getSerializer().deSerializing();
             this.Hide();
             controller.allCustomerGUI();
+            for (int i = 0; i < controller.getAllCustomers().allCustomersList.Count; i++)
+            {
+                controller.getAllCustomers().allCustomerslistBox.Items.Add(controller.getAllCustomers().allCustomersList.ElementAt(i).getInfo());
+                controller.custID = controller.getAllCustomers().allCustomersList.ElementAt(i).getId() + 1;
+            }
+        }
+
+        private void Main_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            controller.onClose();
         }
     }
 }
