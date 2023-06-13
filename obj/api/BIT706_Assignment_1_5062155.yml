@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: BIT706_Assignment_1_5062155
+  commentId: N:BIT706_Assignment_1_5062155
+  id: BIT706_Assignment_1_5062155
+  children:
+  - BIT706_Assignment_1_5062155.Account
+  - BIT706_Assignment_1_5062155.AllAccounts
+  - BIT706_Assignment_1_5062155.Invest
+  - BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: BIT706_Assignment_1_5062155
+  nameWithType: BIT706_Assignment_1_5062155
+  fullName: BIT706_Assignment_1_5062155
+  type: Namespace
+  assemblies:
+  - BIT706-A2-PartA
+references:
+- uid: BIT706_Assignment_1_5062155.Account
+  commentId: T:BIT706_Assignment_1_5062155.Account
+  parent: BIT706_Assignment_1_5062155
+  name: Account
+  nameWithType: Account
+  fullName: BIT706_Assignment_1_5062155.Account
+- uid: BIT706_Assignment_1_5062155.AllAccounts
+  commentId: T:BIT706_Assignment_1_5062155.AllAccounts
+  parent: BIT706_Assignment_1_5062155
+  name: AllAccounts
+  nameWithType: AllAccounts
+  fullName: BIT706_Assignment_1_5062155.AllAccounts
+- uid: BIT706_Assignment_1_5062155.Invest
+  commentId: T:BIT706_Assignment_1_5062155.Invest
+  parent: BIT706_Assignment_1_5062155
+  name: Invest
+  nameWithType: Invest
+  fullName: BIT706_Assignment_1_5062155.Invest
+- uid: BIT706_Assignment_1_5062155.Omni
+  commentId: T:BIT706_Assignment_1_5062155.Omni
+  parent: BIT706_Assignment_1_5062155
+  name: Omni
+  nameWithType: Omni
+  fullName: BIT706_Assignment_1_5062155.Omni
+- uid: BIT706_Assignment_1_5062155
+  commentId: N:BIT706_Assignment_1_5062155
+  name: BIT706_Assignment_1_5062155
+  nameWithType: BIT706_Assignment_1_5062155
+  fullName: BIT706_Assignment_1_5062155

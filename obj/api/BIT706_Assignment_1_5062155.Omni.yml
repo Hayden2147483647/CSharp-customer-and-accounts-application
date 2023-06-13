@@ -1,0 +1,1315 @@
+### YamlMime:ManagedReference
+items:
+- uid: BIT706_Assignment_1_5062155.Omni
+  commentId: T:BIT706_Assignment_1_5062155.Omni
+  id: Omni
+  parent: BIT706_Assignment_1_5062155
+  children:
+  - BIT706_Assignment_1_5062155.Omni.#ctor(System.Int32,System.Double)
+  - BIT706_Assignment_1_5062155.Omni.calculateFees
+  - BIT706_Assignment_1_5062155.Omni.calculateIntrest
+  - BIT706_Assignment_1_5062155.Omni.fees
+  - BIT706_Assignment_1_5062155.Omni.Fees
+  - BIT706_Assignment_1_5062155.Omni.getAccountInfo
+  - BIT706_Assignment_1_5062155.Omni.getAccountName
+  - BIT706_Assignment_1_5062155.Omni.getFee
+  - BIT706_Assignment_1_5062155.Omni.getInterest
+  - BIT706_Assignment_1_5062155.Omni.getOverdraft
+  - BIT706_Assignment_1_5062155.Omni.interest
+  - BIT706_Assignment_1_5062155.Omni.Interest
+  - BIT706_Assignment_1_5062155.Omni.omniName
+  - BIT706_Assignment_1_5062155.Omni.overdraft
+  - BIT706_Assignment_1_5062155.Omni.Overdraft
+  - BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  - BIT706_Assignment_1_5062155.Omni.setInterest(System.Double)
+  langs:
+  - csharp
+  - vb
+  name: Omni
+  nameWithType: Omni
+  fullName: BIT706_Assignment_1_5062155.Omni
+  type: Class
+  source:
+    id: Omni
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 9
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Omni : Account
+    content.vb: >-
+      <Serializable>
+
+      Public Class Omni
+          Inherits Account
+  inheritance:
+  - System.Object
+  - BIT706_Assignment_1_5062155.Account
+  inheritedMembers:
+  - BIT706_Assignment_1_5062155.Account.account_id
+  - BIT706_Assignment_1_5062155.Account.everydayInterest
+  - BIT706_Assignment_1_5062155.Account.everydayFee
+  - BIT706_Assignment_1_5062155.Account.balance_amount
+  - BIT706_Assignment_1_5062155.Account.accountName
+  - BIT706_Assignment_1_5062155.Account.getAccountID
+  - BIT706_Assignment_1_5062155.Account.getBalance
+  - BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+  - BIT706_Assignment_1_5062155.Account.getBalanceString
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: BIT706_Assignment_1_5062155.Omni.interest
+  commentId: F:BIT706_Assignment_1_5062155.Omni.interest
+  id: interest
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: interest
+  nameWithType: Omni.interest
+  fullName: BIT706_Assignment_1_5062155.Omni.interest
+  type: Field
+  source:
+    id: interest
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 12
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: protected double interest
+    return:
+      type: System.Double
+    content.vb: Protected interest As Double
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: BIT706_Assignment_1_5062155.Omni.overdraft
+  commentId: F:BIT706_Assignment_1_5062155.Omni.overdraft
+  id: overdraft
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: overdraft
+  nameWithType: Omni.overdraft
+  fullName: BIT706_Assignment_1_5062155.Omni.overdraft
+  type: Field
+  source:
+    id: overdraft
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 13
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: protected double overdraft
+    return:
+      type: System.Double
+    content.vb: Protected overdraft As Double
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: BIT706_Assignment_1_5062155.Omni.fees
+  commentId: F:BIT706_Assignment_1_5062155.Omni.fees
+  id: fees
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: fees
+  nameWithType: Omni.fees
+  fullName: BIT706_Assignment_1_5062155.Omni.fees
+  type: Field
+  source:
+    id: fees
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 14
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: protected double fees
+    return:
+      type: System.Double
+    content.vb: Protected fees As Double
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: BIT706_Assignment_1_5062155.Omni.omniName
+  commentId: F:BIT706_Assignment_1_5062155.Omni.omniName
+  id: omniName
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: omniName
+  nameWithType: Omni.omniName
+  fullName: BIT706_Assignment_1_5062155.Omni.omniName
+  type: Field
+  source:
+    id: omniName
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 15
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: protected string omniName
+    return:
+      type: System.String
+    content.vb: Protected omniName As String
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: BIT706_Assignment_1_5062155.Omni.#ctor(System.Int32,System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Omni.#ctor(System.Int32,System.Double)
+  id: '#ctor(System.Int32,System.Double)'
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: Omni(Int32, Double)
+  nameWithType: Omni.Omni(Int32, Double)
+  fullName: BIT706_Assignment_1_5062155.Omni.Omni(System.Int32, System.Double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 17
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public Omni(int account_id, double balance_amount)
+    parameters:
+    - id: account_id
+      type: System.Int32
+    - id: balance_amount
+      type: System.Double
+    content.vb: Public Sub New(account_id As Integer, balance_amount As Double)
+  overload: BIT706_Assignment_1_5062155.Omni.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.Interest
+  commentId: P:BIT706_Assignment_1_5062155.Omni.Interest
+  id: Interest
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: Interest
+  nameWithType: Omni.Interest
+  fullName: BIT706_Assignment_1_5062155.Omni.Interest
+  type: Property
+  source:
+    id: Interest
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 22
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public double Interest { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Interest As Double
+  overload: BIT706_Assignment_1_5062155.Omni.Interest*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.Fees
+  commentId: P:BIT706_Assignment_1_5062155.Omni.Fees
+  id: Fees
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: Fees
+  nameWithType: Omni.Fees
+  fullName: BIT706_Assignment_1_5062155.Omni.Fees
+  type: Property
+  source:
+    id: Fees
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 28
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public double Fees { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Fees As Double
+  overload: BIT706_Assignment_1_5062155.Omni.Fees*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.Overdraft
+  commentId: P:BIT706_Assignment_1_5062155.Omni.Overdraft
+  id: Overdraft
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: Overdraft
+  nameWithType: Omni.Overdraft
+  fullName: BIT706_Assignment_1_5062155.Omni.Overdraft
+  type: Property
+  source:
+    id: Overdraft
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 34
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public double Overdraft { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Overdraft As Double
+  overload: BIT706_Assignment_1_5062155.Omni.Overdraft*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.calculateIntrest
+  commentId: M:BIT706_Assignment_1_5062155.Omni.calculateIntrest
+  id: calculateIntrest
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: calculateIntrest()
+  nameWithType: Omni.calculateIntrest()
+  fullName: BIT706_Assignment_1_5062155.Omni.calculateIntrest()
+  type: Method
+  source:
+    id: calculateIntrest
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 40
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public string calculateIntrest()
+    return:
+      type: System.String
+    content.vb: Public Function calculateIntrest As String
+  overload: BIT706_Assignment_1_5062155.Omni.calculateIntrest*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.getInterest
+  commentId: M:BIT706_Assignment_1_5062155.Omni.getInterest
+  id: getInterest
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: getInterest()
+  nameWithType: Omni.getInterest()
+  fullName: BIT706_Assignment_1_5062155.Omni.getInterest()
+  type: Method
+  source:
+    id: getInterest
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 46
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override double getInterest()
+    return:
+      type: System.Double
+    content.vb: Public Overrides Function getInterest As Double
+  overridden: BIT706_Assignment_1_5062155.Account.getInterest
+  overload: BIT706_Assignment_1_5062155.Omni.getInterest*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: BIT706_Assignment_1_5062155.Omni.setInterest(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Omni.setInterest(System.Double)
+  id: setInterest(System.Double)
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: setInterest(Double)
+  nameWithType: Omni.setInterest(Double)
+  fullName: BIT706_Assignment_1_5062155.Omni.setInterest(System.Double)
+  type: Method
+  source:
+    id: setInterest
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 51
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override void setInterest(double interestSet)
+    parameters:
+    - id: interestSet
+      type: System.Double
+    content.vb: Public Overrides Sub setInterest(interestSet As Double)
+  overridden: BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
+  overload: BIT706_Assignment_1_5062155.Omni.setInterest*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: BIT706_Assignment_1_5062155.Omni.getFee
+  commentId: M:BIT706_Assignment_1_5062155.Omni.getFee
+  id: getFee
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: getFee()
+  nameWithType: Omni.getFee()
+  fullName: BIT706_Assignment_1_5062155.Omni.getFee()
+  type: Method
+  source:
+    id: getFee
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 53
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override double getFee()
+    return:
+      type: System.Double
+    content.vb: Public Overrides Function getFee As Double
+  overridden: BIT706_Assignment_1_5062155.Account.getFee
+  overload: BIT706_Assignment_1_5062155.Omni.getFee*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  id: setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: setFee(Double)
+  nameWithType: Omni.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  type: Method
+  source:
+    id: setFee
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 57
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override void setFee(double feeSet)
+    parameters:
+    - id: feeSet
+      type: System.Double
+    content.vb: Public Overrides Sub setFee(feeSet As Double)
+  overridden: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  overload: BIT706_Assignment_1_5062155.Omni.setFee*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: BIT706_Assignment_1_5062155.Omni.getOverdraft
+  commentId: M:BIT706_Assignment_1_5062155.Omni.getOverdraft
+  id: getOverdraft
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: getOverdraft()
+  nameWithType: Omni.getOverdraft()
+  fullName: BIT706_Assignment_1_5062155.Omni.getOverdraft()
+  type: Method
+  source:
+    id: getOverdraft
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 59
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public string getOverdraft()
+    return:
+      type: System.String
+    content.vb: Public Function getOverdraft As String
+  overload: BIT706_Assignment_1_5062155.Omni.getOverdraft*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.calculateFees
+  commentId: M:BIT706_Assignment_1_5062155.Omni.calculateFees
+  id: calculateFees
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: calculateFees()
+  nameWithType: Omni.calculateFees()
+  fullName: BIT706_Assignment_1_5062155.Omni.calculateFees()
+  type: Method
+  source:
+    id: calculateFees
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 64
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public string calculateFees()
+    return:
+      type: System.String
+    content.vb: Public Function calculateFees As String
+  overload: BIT706_Assignment_1_5062155.Omni.calculateFees*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BIT706_Assignment_1_5062155.Omni.getAccountName
+  commentId: M:BIT706_Assignment_1_5062155.Omni.getAccountName
+  id: getAccountName
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: getAccountName()
+  nameWithType: Omni.getAccountName()
+  fullName: BIT706_Assignment_1_5062155.Omni.getAccountName()
+  type: Method
+  source:
+    id: getAccountName
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 69
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override string getAccountName()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function getAccountName As String
+  overridden: BIT706_Assignment_1_5062155.Account.getAccountName
+  overload: BIT706_Assignment_1_5062155.Omni.getAccountName*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: BIT706_Assignment_1_5062155.Omni.getAccountInfo
+  commentId: M:BIT706_Assignment_1_5062155.Omni.getAccountInfo
+  id: getAccountInfo
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: getAccountInfo()
+  nameWithType: Omni.getAccountInfo()
+  fullName: BIT706_Assignment_1_5062155.Omni.getAccountInfo()
+  type: Method
+  source:
+    id: getAccountInfo
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 75
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override string getAccountInfo()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function getAccountInfo As String
+  overridden: BIT706_Assignment_1_5062155.Account.getAccountInfo
+  overload: BIT706_Assignment_1_5062155.Omni.getAccountInfo*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: BIT706_Assignment_1_5062155
+  commentId: N:BIT706_Assignment_1_5062155
+  name: BIT706_Assignment_1_5062155
+  nameWithType: BIT706_Assignment_1_5062155
+  fullName: BIT706_Assignment_1_5062155
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: BIT706_Assignment_1_5062155.Account
+  commentId: T:BIT706_Assignment_1_5062155.Account
+  parent: BIT706_Assignment_1_5062155
+  name: Account
+  nameWithType: Account
+  fullName: BIT706_Assignment_1_5062155.Account
+- uid: BIT706_Assignment_1_5062155.Account.account_id
+  commentId: F:BIT706_Assignment_1_5062155.Account.account_id
+  parent: BIT706_Assignment_1_5062155.Account
+  name: account_id
+  nameWithType: Account.account_id
+  fullName: BIT706_Assignment_1_5062155.Account.account_id
+- uid: BIT706_Assignment_1_5062155.Account.everydayInterest
+  commentId: F:BIT706_Assignment_1_5062155.Account.everydayInterest
+  parent: BIT706_Assignment_1_5062155.Account
+  name: everydayInterest
+  nameWithType: Account.everydayInterest
+  fullName: BIT706_Assignment_1_5062155.Account.everydayInterest
+- uid: BIT706_Assignment_1_5062155.Account.everydayFee
+  commentId: F:BIT706_Assignment_1_5062155.Account.everydayFee
+  parent: BIT706_Assignment_1_5062155.Account
+  name: everydayFee
+  nameWithType: Account.everydayFee
+  fullName: BIT706_Assignment_1_5062155.Account.everydayFee
+- uid: BIT706_Assignment_1_5062155.Account.balance_amount
+  commentId: F:BIT706_Assignment_1_5062155.Account.balance_amount
+  parent: BIT706_Assignment_1_5062155.Account
+  name: balance_amount
+  nameWithType: Account.balance_amount
+  fullName: BIT706_Assignment_1_5062155.Account.balance_amount
+- uid: BIT706_Assignment_1_5062155.Account.accountName
+  commentId: F:BIT706_Assignment_1_5062155.Account.accountName
+  parent: BIT706_Assignment_1_5062155.Account
+  name: accountName
+  nameWithType: Account.accountName
+  fullName: BIT706_Assignment_1_5062155.Account.accountName
+- uid: BIT706_Assignment_1_5062155.Account.getAccountID
+  commentId: M:BIT706_Assignment_1_5062155.Account.getAccountID
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getAccountID()
+  nameWithType: Account.getAccountID()
+  fullName: BIT706_Assignment_1_5062155.Account.getAccountID()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getAccountID
+    name: getAccountID
+    nameWithType: Account.getAccountID
+    fullName: BIT706_Assignment_1_5062155.Account.getAccountID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getAccountID
+    name: getAccountID
+    nameWithType: Account.getAccountID
+    fullName: BIT706_Assignment_1_5062155.Account.getAccountID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Account.getBalance
+  commentId: M:BIT706_Assignment_1_5062155.Account.getBalance
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getBalance()
+  nameWithType: Account.getBalance()
+  fullName: BIT706_Assignment_1_5062155.Account.getBalance()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getBalance
+    name: getBalance
+    nameWithType: Account.getBalance
+    fullName: BIT706_Assignment_1_5062155.Account.getBalance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getBalance
+    name: getBalance
+    nameWithType: Account.getBalance
+    fullName: BIT706_Assignment_1_5062155.Account.getBalance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+  parent: BIT706_Assignment_1_5062155.Account
+  isExternal: true
+  name: setBalance(Double)
+  nameWithType: Account.setBalance(Double)
+  fullName: BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+    name: setBalance
+    nameWithType: Account.setBalance
+    fullName: BIT706_Assignment_1_5062155.Account.setBalance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+    name: setBalance
+    nameWithType: Account.setBalance
+    fullName: BIT706_Assignment_1_5062155.Account.setBalance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Account.getBalanceString
+  commentId: M:BIT706_Assignment_1_5062155.Account.getBalanceString
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getBalanceString()
+  nameWithType: Account.getBalanceString()
+  fullName: BIT706_Assignment_1_5062155.Account.getBalanceString()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getBalanceString
+    name: getBalanceString
+    nameWithType: Account.getBalanceString
+    fullName: BIT706_Assignment_1_5062155.Account.getBalanceString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getBalanceString
+    name: getBalanceString
+    nameWithType: Account.getBalanceString
+    fullName: BIT706_Assignment_1_5062155.Account.getBalanceString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: BIT706_Assignment_1_5062155.Omni.#ctor*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.#ctor
+  name: Omni
+  nameWithType: Omni.Omni
+  fullName: BIT706_Assignment_1_5062155.Omni.Omni
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: BIT706_Assignment_1_5062155.Omni.Interest*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.Interest
+  name: Interest
+  nameWithType: Omni.Interest
+  fullName: BIT706_Assignment_1_5062155.Omni.Interest
+- uid: BIT706_Assignment_1_5062155.Omni.Fees*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.Fees
+  name: Fees
+  nameWithType: Omni.Fees
+  fullName: BIT706_Assignment_1_5062155.Omni.Fees
+- uid: BIT706_Assignment_1_5062155.Omni.Overdraft*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.Overdraft
+  name: Overdraft
+  nameWithType: Omni.Overdraft
+  fullName: BIT706_Assignment_1_5062155.Omni.Overdraft
+- uid: BIT706_Assignment_1_5062155.Omni.calculateIntrest*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.calculateIntrest
+  name: calculateIntrest
+  nameWithType: Omni.calculateIntrest
+  fullName: BIT706_Assignment_1_5062155.Omni.calculateIntrest
+- uid: BIT706_Assignment_1_5062155.Account.getInterest
+  commentId: M:BIT706_Assignment_1_5062155.Account.getInterest
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getInterest()
+  nameWithType: Account.getInterest()
+  fullName: BIT706_Assignment_1_5062155.Account.getInterest()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getInterest
+    name: getInterest
+    nameWithType: Account.getInterest
+    fullName: BIT706_Assignment_1_5062155.Account.getInterest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getInterest
+    name: getInterest
+    nameWithType: Account.getInterest
+    fullName: BIT706_Assignment_1_5062155.Account.getInterest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.getInterest*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.getInterest
+  name: getInterest
+  nameWithType: Omni.getInterest
+  fullName: BIT706_Assignment_1_5062155.Omni.getInterest
+- uid: BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
+  parent: BIT706_Assignment_1_5062155.Account
+  isExternal: true
+  name: setInterest(Double)
+  nameWithType: Account.setInterest(Double)
+  fullName: BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
+    name: setInterest
+    nameWithType: Account.setInterest
+    fullName: BIT706_Assignment_1_5062155.Account.setInterest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
+    name: setInterest
+    nameWithType: Account.setInterest
+    fullName: BIT706_Assignment_1_5062155.Account.setInterest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.setInterest*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.setInterest
+  name: setInterest
+  nameWithType: Omni.setInterest
+  fullName: BIT706_Assignment_1_5062155.Omni.setInterest
+- uid: BIT706_Assignment_1_5062155.Account.getFee
+  commentId: M:BIT706_Assignment_1_5062155.Account.getFee
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getFee()
+  nameWithType: Account.getFee()
+  fullName: BIT706_Assignment_1_5062155.Account.getFee()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getFee
+    name: getFee
+    nameWithType: Account.getFee
+    fullName: BIT706_Assignment_1_5062155.Account.getFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getFee
+    name: getFee
+    nameWithType: Account.getFee
+    fullName: BIT706_Assignment_1_5062155.Account.getFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.getFee*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.getFee
+  name: getFee
+  nameWithType: Omni.getFee
+  fullName: BIT706_Assignment_1_5062155.Omni.getFee
+- uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Account
+  isExternal: true
+  name: setFee(Double)
+  nameWithType: Account.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+    name: setFee
+    nameWithType: Account.setFee
+    fullName: BIT706_Assignment_1_5062155.Account.setFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+    name: setFee
+    nameWithType: Account.setFee
+    fullName: BIT706_Assignment_1_5062155.Account.setFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.setFee*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.setFee
+  name: setFee
+  nameWithType: Omni.setFee
+  fullName: BIT706_Assignment_1_5062155.Omni.setFee
+- uid: BIT706_Assignment_1_5062155.Omni.getOverdraft*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.getOverdraft
+  name: getOverdraft
+  nameWithType: Omni.getOverdraft
+  fullName: BIT706_Assignment_1_5062155.Omni.getOverdraft
+- uid: BIT706_Assignment_1_5062155.Omni.calculateFees*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.calculateFees
+  name: calculateFees
+  nameWithType: Omni.calculateFees
+  fullName: BIT706_Assignment_1_5062155.Omni.calculateFees
+- uid: BIT706_Assignment_1_5062155.Account.getAccountName
+  commentId: M:BIT706_Assignment_1_5062155.Account.getAccountName
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getAccountName()
+  nameWithType: Account.getAccountName()
+  fullName: BIT706_Assignment_1_5062155.Account.getAccountName()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getAccountName
+    name: getAccountName
+    nameWithType: Account.getAccountName
+    fullName: BIT706_Assignment_1_5062155.Account.getAccountName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getAccountName
+    name: getAccountName
+    nameWithType: Account.getAccountName
+    fullName: BIT706_Assignment_1_5062155.Account.getAccountName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.getAccountName*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.getAccountName
+  name: getAccountName
+  nameWithType: Omni.getAccountName
+  fullName: BIT706_Assignment_1_5062155.Omni.getAccountName
+- uid: BIT706_Assignment_1_5062155.Account.getAccountInfo
+  commentId: M:BIT706_Assignment_1_5062155.Account.getAccountInfo
+  parent: BIT706_Assignment_1_5062155.Account
+  name: getAccountInfo()
+  nameWithType: Account.getAccountInfo()
+  fullName: BIT706_Assignment_1_5062155.Account.getAccountInfo()
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.getAccountInfo
+    name: getAccountInfo
+    nameWithType: Account.getAccountInfo
+    fullName: BIT706_Assignment_1_5062155.Account.getAccountInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.getAccountInfo
+    name: getAccountInfo
+    nameWithType: Account.getAccountInfo
+    fullName: BIT706_Assignment_1_5062155.Account.getAccountInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.getAccountInfo*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.getAccountInfo
+  name: getAccountInfo
+  nameWithType: Omni.getAccountInfo
+  fullName: BIT706_Assignment_1_5062155.Omni.getAccountInfo
