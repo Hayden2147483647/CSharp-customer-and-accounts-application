@@ -306,7 +306,7 @@ namespace BIT706_Assignment_1_5062155
             }
             else if (AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].getBalance() < double.Parse(depositWithdrawTextBox.Text))
             {
-                if (AllCustomers.selectedCustomer.isCustomerStaff())
+                if (AllCustomers.selectedCustomer.isCustomerStaff() == true)
                 {
                     AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].setFee(5);
                 }

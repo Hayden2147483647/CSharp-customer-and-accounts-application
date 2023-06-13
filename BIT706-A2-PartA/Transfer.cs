@@ -66,6 +66,18 @@ namespace BIT706_A2_PartA
             {
                 MessageBox.Show("Please input a positive number");
             }
+            else if (AllCustomers.selectedCustomer.customerAccountsList[transferFromListBox.SelectedIndex].getBalance() < double.Parse(transferAmountTextBox.Text))
+            {
+                if (AllCustomers.selectedCustomer.isCustomerStaff() == true)
+                {
+                    AllCustomers.selectedCustomer.customerAccountsList[transferFromListBox.SelectedIndex].setFee(5);
+                }
+                else
+                {
+                    AllCustomers.selectedCustomer.customerAccountsList[transferFromListBox.SelectedIndex].setFee(10);
+                }
+                MessageBox.Show("Transfer Failed");
+            }
             else
             {
                 //minus the input to the selected accounts balance

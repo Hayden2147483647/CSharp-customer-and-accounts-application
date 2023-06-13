@@ -150,7 +150,7 @@ namespace BIT706_A2_PartA
         /// <returns>The accounts name, id, balance, and interest</returns>
         public string accountString(List<Account> account, int element)
         {
-            return account.ElementAt(element).getAccountName() + "\t" + account.ElementAt(element).getAccountID() + "\t" + account.ElementAt(element).getBalanceString() + "\t" + account.ElementAt(element).getInterest() + "%";
+            return account.ElementAt(element).getAccountName() + "\t" + account.ElementAt(element).getAccountID() + "\t" + account.ElementAt(element).getBalanceString() + "\t" + account.ElementAt(element).getInterest() + "%\tFee: $" + account.ElementAt(element).getFee();
         }
         /// <summary>
         /// This method gets the AllAccount class object

@@ -20,6 +20,7 @@ items:
   - BIT706_Assignment_1_5062155.Omni.omniName
   - BIT706_Assignment_1_5062155.Omni.overdraft
   - BIT706_Assignment_1_5062155.Omni.Overdraft
+  - BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
   - BIT706_Assignment_1_5062155.Omni.setInterest(System.Double)
   langs:
   - csharp
@@ -429,6 +430,38 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  id: setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Omni
+  langs:
+  - csharp
+  - vb
+  name: setFee(Double)
+  nameWithType: Omni.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Omni.setFee(System.Double)
+  type: Method
+  source:
+    id: setFee
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
+    startLine: 57
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override void setFee(double feeSet)
+    parameters:
+    - id: feeSet
+      type: System.Double
+    content.vb: Public Overrides Sub setFee(feeSet As Double)
+  overridden: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  overload: BIT706_Assignment_1_5062155.Omni.setFee*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: BIT706_Assignment_1_5062155.Omni.getOverdraft
   commentId: M:BIT706_Assignment_1_5062155.Omni.getOverdraft
   id: getOverdraft
@@ -443,7 +476,7 @@ items:
   source:
     id: getOverdraft
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
-    startLine: 58
+    startLine: 59
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -471,7 +504,7 @@ items:
   source:
     id: calculateFees
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
-    startLine: 63
+    startLine: 64
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -499,7 +532,7 @@ items:
   source:
     id: getAccountName
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
-    startLine: 68
+    startLine: 69
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -530,7 +563,7 @@ items:
   source:
     id: getAccountInfo
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Omni.cs'
-    startLine: 74
+    startLine: 75
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -1160,6 +1193,50 @@ references:
   name: getFee
   nameWithType: Omni.getFee
   fullName: BIT706_Assignment_1_5062155.Omni.getFee
+- uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Account
+  isExternal: true
+  name: setFee(Double)
+  nameWithType: Account.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+    name: setFee
+    nameWithType: Account.setFee
+    fullName: BIT706_Assignment_1_5062155.Account.setFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+    name: setFee
+    nameWithType: Account.setFee
+    fullName: BIT706_Assignment_1_5062155.Account.setFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Omni.setFee*
+  commentId: Overload:BIT706_Assignment_1_5062155.Omni.setFee
+  name: setFee
+  nameWithType: Omni.setFee
+  fullName: BIT706_Assignment_1_5062155.Omni.setFee
 - uid: BIT706_Assignment_1_5062155.Omni.getOverdraft*
   commentId: Overload:BIT706_Assignment_1_5062155.Omni.getOverdraft
   name: getOverdraft

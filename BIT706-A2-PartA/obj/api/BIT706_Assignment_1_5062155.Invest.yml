@@ -17,6 +17,7 @@ items:
   - BIT706_Assignment_1_5062155.Invest.Interest
   - BIT706_Assignment_1_5062155.Invest.intrest
   - BIT706_Assignment_1_5062155.Invest.investName
+  - BIT706_Assignment_1_5062155.Invest.setFee(System.Double)
   - BIT706_Assignment_1_5062155.Invest.setInterest(System.Double)
   langs:
   - csharp
@@ -336,6 +337,38 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: BIT706_Assignment_1_5062155.Invest.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Invest.setFee(System.Double)
+  id: setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Invest
+  langs:
+  - csharp
+  - vb
+  name: setFee(Double)
+  nameWithType: Invest.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Invest.setFee(System.Double)
+  type: Method
+  source:
+    id: setFee
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Invest.cs'
+    startLine: 48
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public override void setFee(double feeSet)
+    parameters:
+    - id: feeSet
+      type: System.Double
+    content.vb: Public Overrides Sub setFee(feeSet As Double)
+  overridden: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  overload: BIT706_Assignment_1_5062155.Invest.setFee*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: BIT706_Assignment_1_5062155.Invest.setInterest(System.Double)
   commentId: M:BIT706_Assignment_1_5062155.Invest.setInterest(System.Double)
   id: setInterest(System.Double)
@@ -350,7 +383,7 @@ items:
   source:
     id: setInterest
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Invest.cs'
-    startLine: 48
+    startLine: 50
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -382,7 +415,7 @@ items:
   source:
     id: calculateFees
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Invest.cs'
-    startLine: 50
+    startLine: 52
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -410,7 +443,7 @@ items:
   source:
     id: getAccountName
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Invest.cs'
-    startLine: 55
+    startLine: 57
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -441,7 +474,7 @@ items:
   source:
     id: getAccountInfo
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Invest.cs'
-    startLine: 60
+    startLine: 62
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -1022,6 +1055,50 @@ references:
   name: getFee
   nameWithType: Invest.getFee
   fullName: BIT706_Assignment_1_5062155.Invest.getFee
+- uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Account
+  isExternal: true
+  name: setFee(Double)
+  nameWithType: Account.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  spec.csharp:
+  - uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+    name: setFee
+    nameWithType: Account.setFee
+    fullName: BIT706_Assignment_1_5062155.Account.setFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+    name: setFee
+    nameWithType: Account.setFee
+    fullName: BIT706_Assignment_1_5062155.Account.setFee
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BIT706_Assignment_1_5062155.Invest.setFee*
+  commentId: Overload:BIT706_Assignment_1_5062155.Invest.setFee
+  name: setFee
+  nameWithType: Invest.setFee
+  fullName: BIT706_Assignment_1_5062155.Invest.setFee
 - uid: BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
   commentId: M:BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
   parent: BIT706_Assignment_1_5062155.Account

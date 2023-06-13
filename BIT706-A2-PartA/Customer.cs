@@ -14,7 +14,7 @@ namespace BIT706_A2_PartA
         private int id;
         private string name;
         private List<Account> accounts = new List<Account>();
-        private bool isStaff = false;
+        private bool isStaff;
 
         public Customer(int id, string name, bool isStaff)
         {

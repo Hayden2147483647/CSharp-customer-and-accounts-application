@@ -19,6 +19,7 @@ items:
   - BIT706_Assignment_1_5062155.Account.getFee
   - BIT706_Assignment_1_5062155.Account.getInterest
   - BIT706_Assignment_1_5062155.Account.setBalance(System.Double)
+  - BIT706_Assignment_1_5062155.Account.setFee(System.Double)
   - BIT706_Assignment_1_5062155.Account.setInterest(System.Double)
   langs:
   - csharp
@@ -438,6 +439,37 @@ items:
   modifiers.vb:
   - Public
   - Overridable
+- uid: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  commentId: M:BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  id: setFee(System.Double)
+  parent: BIT706_Assignment_1_5062155.Account
+  langs:
+  - csharp
+  - vb
+  name: setFee(Double)
+  nameWithType: Account.setFee(Double)
+  fullName: BIT706_Assignment_1_5062155.Account.setFee(System.Double)
+  type: Method
+  source:
+    id: setFee
+    path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Account.cs'
+    startLine: 58
+  assemblies:
+  - BIT706-A2-PartA
+  namespace: BIT706_Assignment_1_5062155
+  syntax:
+    content: public virtual void setFee(double feeSet)
+    parameters:
+    - id: feeSet
+      type: System.Double
+    content.vb: Public Overridable Sub setFee(feeSet As Double)
+  overload: BIT706_Assignment_1_5062155.Account.setFee*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: BIT706_Assignment_1_5062155.Account.getBalanceString
   commentId: M:BIT706_Assignment_1_5062155.Account.getBalanceString
   id: getBalanceString
@@ -452,7 +484,7 @@ items:
   source:
     id: getBalanceString
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Account.cs'
-    startLine: 58
+    startLine: 63
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -480,7 +512,7 @@ items:
   source:
     id: getAccountInfo
     path: 'C:\Users\The EXPLORER\Documents\Open Polytechnic\BIT706 Programming 3\Assignment #3\Part-D\BIT706-A2-PartA\Account.cs'
-    startLine: 63
+    startLine: 68
   assemblies:
   - BIT706-A2-PartA
   namespace: BIT706_Assignment_1_5062155
@@ -855,6 +887,11 @@ references:
   name: getFee
   nameWithType: Account.getFee
   fullName: BIT706_Assignment_1_5062155.Account.getFee
+- uid: BIT706_Assignment_1_5062155.Account.setFee*
+  commentId: Overload:BIT706_Assignment_1_5062155.Account.setFee
+  name: setFee
+  nameWithType: Account.setFee
+  fullName: BIT706_Assignment_1_5062155.Account.setFee
 - uid: BIT706_Assignment_1_5062155.Account.getBalanceString*
   commentId: Overload:BIT706_Assignment_1_5062155.Account.getBalanceString
   name: getBalanceString
