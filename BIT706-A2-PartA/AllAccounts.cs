@@ -28,6 +28,7 @@ namespace BIT706_Assignment_1_5062155
         private Label label3;
         private Button setAccountsIntrestButton;
         private TextBox intrestTextBox;
+        private Label interestLabel;
         private double doubleCheck;
 
         public AllAccounts()
@@ -56,6 +57,7 @@ namespace BIT706_Assignment_1_5062155
             this.label3 = new System.Windows.Forms.Label();
             this.setAccountsIntrestButton = new System.Windows.Forms.Button();
             this.intrestTextBox = new System.Windows.Forms.TextBox();
+            this.interestLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // allAccountslistBox
@@ -180,10 +182,21 @@ namespace BIT706_Assignment_1_5062155
             this.intrestTextBox.Size = new System.Drawing.Size(103, 20);
             this.intrestTextBox.TabIndex = 14;
             // 
+            // interestLabel
+            // 
+            this.interestLabel.AutoSize = true;
+            this.interestLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interestLabel.Location = new System.Drawing.Point(381, 35);
+            this.interestLabel.Name = "interestLabel";
+            this.interestLabel.Size = new System.Drawing.Size(144, 20);
+            this.interestLabel.TabIndex = 15;
+            this.interestLabel.Text = "Interest per Month:";
+            // 
             // AllAccounts
             // 
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(590, 439);
+            this.Controls.Add(this.interestLabel);
             this.Controls.Add(this.intrestTextBox);
             this.Controls.Add(this.setAccountsIntrestButton);
             this.Controls.Add(this.label3);
@@ -216,8 +229,9 @@ namespace BIT706_Assignment_1_5062155
             }
             else
             {
-                //Selects the account from the list and display its intrest
+                //Selects the account from the list and display its intrest as well as 
                 intrestTextBox.Text = AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].getInterest().ToString();
+                interestLabel.Text = "Interest per Month: $" + ((AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].getBalance() * AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].getInterest()) / 12);
             }
         }
 
@@ -231,6 +245,7 @@ namespace BIT706_Assignment_1_5062155
         {
             this.Visible = false;
             controller.allCustomerGUI();
+            //clears the list box so that next time navigating to this screen it refreshs
             allAccountslistBox.Items.Clear();
             depositWithdrawTextBox.Text = string.Empty;
         }
@@ -288,6 +303,17 @@ namespace BIT706_Assignment_1_5062155
             else if (double.Parse(depositWithdrawTextBox.Text) <= 0)
             {
                 MessageBox.Show("Please input a positive number");
+            }
+            else if (AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].getBalance() < double.Parse(depositWithdrawTextBox.Text))
+            {
+                if (AllCustomers.selectedCustomer.isCustomerStaff())
+                {
+                    AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].setFee(5);
+                }
+                else
+                {
+                    AllCustomers.selectedCustomer.customerAccountsList[allAccountslistBox.SelectedIndex].setFee(10);
+                }
             }
             else
             {

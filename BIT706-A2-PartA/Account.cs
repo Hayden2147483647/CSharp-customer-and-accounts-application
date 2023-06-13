@@ -11,6 +11,7 @@ namespace BIT706_Assignment_1_5062155
     {
         protected int account_id;
         protected double everydayInterest = 0;
+        protected double everydayFee = 10;
         protected double balance_amount;
         protected string accountName = "Everyday";
 
@@ -48,6 +49,16 @@ namespace BIT706_Assignment_1_5062155
         public virtual void setInterest(double interestSet)
         {
             everydayInterest = interestSet * 0;
+        }
+
+        public virtual double getFee() 
+        {
+            return everydayFee;
+        }
+
+        public virtual void setFee(double feeSet)
+        {
+            everydayFee += feeSet;
         }
 
         public String getBalanceString()

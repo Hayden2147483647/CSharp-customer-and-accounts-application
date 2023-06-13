@@ -9,13 +9,18 @@ using System.Threading.Tasks;
 
 namespace BIT706_A2_PartA
 {
-    
+    /// <summary>
+    /// 
+    /// </summary>
     public class Serialize
     {
         private static Controller control = new Controller();
-        //downloads all the customer information
+        /// <summary>
+        /// downloads all the customer information
+        /// </summary>
         public void serializing()
         { 
+            //This stream with put all the data into Part-E folder for you
             FileStream stream = new FileStream("..\\..\\..\\..\\Part-E\\CustomerData.dat", FileMode.Create);
             BinaryFormatter formatter = new BinaryFormatter();
             try
@@ -33,12 +38,15 @@ namespace BIT706_A2_PartA
             }
         }
 
-        //uploads all the customer information
+        /// <summary>
+        /// uploads all the customer information
+        /// </summary>
         public void deSerializing()
         {
             control.getAllCustomers().allCustomersList.Clear();
             try
             {
+                //This stream with put all the data into Part-E folder for you
                 FileStream stream = new FileStream("..\\..\\..\\..\\Part-E\\CustomerData.dat", FileMode.Open);
 
                 try

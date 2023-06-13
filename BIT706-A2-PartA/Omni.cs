@@ -51,6 +51,12 @@ namespace BIT706_Assignment_1_5062155
 
         public override void setInterest(double interestSet) => this.Interest = interestSet;
 
+        public override double getFee()
+        {
+            return fees;
+        }
+        public override void setFee(double feeSet) => this.Fees += feeSet;
+
         public String getOverdraft()
         {
             return "$" + overdraft.ToString();

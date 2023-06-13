@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIT706-A2-PartA</name>
+    </assembly>
+    <members>
+        <member name="F:BIT706_Assignment_1_5062155.AllAccounts.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BIT706_Assignment_1_5062155.AllAccounts.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="T:BIT706_A2_PartA.Controller">
+            <summary>
+            Controller class that handles alot of the actions
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.mainForm">
+            <summary>
+            Main form class object
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.allCustomers">
+            <summary>
+            allcustomers class object
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.allAccounts">
+            <summary>
+            allaccounts class object
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.newAccount">
+            <summary>
+            newAccount class object
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.transfer">
+            <summary>
+            transfer class object
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.serialize">
+            <summary>
+            serialize class object
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.accID">
+            <summary>
+            account id for every new account made (ID will be ++ down below)
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Controller.custID">
+            <summary>
+            Customer id for every new customer made (ID will be ++ down below)
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.addCustomer(System.String)">
+            <summary>
+            This method adds a new customer object to the Customer class as well as adds the customer to the allCustomers list
+            </summary>
+            <param name="name">The name for the new customer</param>
+            <returns>Returns the newly added customer</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.removeCustomer(BIT706_A2_PartA.Customer)">
+            <summary>
+            This method removes the input customer from the Customer class and the allCustomer list
+            </summary>
+            <param name="cust">The customer to remove</param>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.editCustomer(BIT706_A2_PartA.Customer,System.String)">
+            <summary>
+            This method edits the input customer objects name to the input string
+            </summary>
+            <param name="cust">The customer to edit</param>
+            <param name="name">The new name for the customer</param>
+            <returns>The edited customer</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.addAccount(System.Double)">
+            <summary>
+            This method adds a new account to the Account class
+            </summary>
+            <param name="amount">The balance for the new account</param>
+            <returns>The new account</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.editAccountBalance(BIT706_A2_PartA.Customer,BIT706_Assignment_1_5062155.Account,System.Double)">
+            <summary>
+            This method edits a customers account balance, mostly used for deposits and withdraws
+            </summary>
+            <param name="cust">The customer of which account to edit</param>
+            <param name="acc">The account to edit</param>
+            <param name="balance">The amount to set the balance for</param>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.addInvest(System.Double)">
+            <summary>
+            This method adds a new Investment account to the Account class
+            </summary>
+            <param name="amount">The balance amount</param>
+            <returns>The Investment account</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.addOmni(System.Double)">
+            <summary>
+            This method adds a new Omni account to the Account class
+            </summary>
+            <param name="amount">The balance amount</param>
+            <returns>The Omni account</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.customerString(BIT706_A2_PartA.Customer)">
+            <summary>
+            This method returns the customers full info
+            </summary>
+            <param name="cust">The customer to get the info from</param>
+            <returns>The customers id and name</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.accountString(System.Collections.Generic.List{BIT706_Assignment_1_5062155.Account},System.Int32)">
+            <summary>
+            This method returns the accounts full info
+            </summary>
+            <param name="account">The account to get the info from</param>
+            <param name="element">The exact index to get the exact account</param>
+            <returns>The accounts name, id, balance, and interest</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.getAllAccount">
+            <summary>
+            This method gets the AllAccount class object
+            </summary>
+            <returns>AllAccount object</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.getTransfer">
+            <summary>
+            This method gets the Transfer class object
+            </summary>
+            <returns>Transfer object</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.getAllCustomers">
+            <summary>
+            This method gets the AllCustomer class object
+            </summary>
+            <returns>AllCustomer object</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.getSerializer">
+            <summary>
+            This method gets the Serialize class object
+            </summary>
+            <returns>Serialize object</returns>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.allCustomerGUI">
+            <summary>
+            This method shows the allCustomers screen
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.allAccountsGUI">
+            <summary>
+            This method shows the allAccounts screen
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.newAccountGUI">
+            <summary>
+            This method shows the newAccount screen
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.transferGUI">
+            <summary>
+            This method shows the transfer screen
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.mainFormGUI">
+            <summary>
+            This method shows the main form screen
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Controller.onClose">
+            <summary>
+            This method serializes all the customer infomation and closes the application
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.AllCustomers.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.AllCustomers.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BIT706_A2_PartA.AllCustomers.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Main_form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Main_form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BIT706_A2_PartA.Main_form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.NewAccount.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.NewAccount.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BIT706_A2_PartA.NewAccount.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:BIT706_A2_PartA.Serialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Serialize.serializing">
+            <summary>
+            downloads all the customer information
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Serialize.deSerializing">
+            <summary>
+            uploads all the customer information
+            </summary>
+        </member>
+        <member name="T:BIT706_A2_PartA.Transfer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Transfer.doubleCheck">
+            <summary>
+            double variable for tryparse
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Transfer.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Transfer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BIT706_A2_PartA.Transfer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BIT706_A2_PartA.Transfer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Transfer.transferFromListBox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BIT706_A2_PartA.Transfer.transferToListBox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BIT706_A2_PartA.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BIT706_A2_PartA.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BIT706_A2_PartA.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

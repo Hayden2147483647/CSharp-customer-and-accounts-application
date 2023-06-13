@@ -11,10 +11,20 @@ using System.Windows.Forms;
 
 namespace BIT706_A2_PartA
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Transfer : Form
     {
+
+        /// <summary>
+        /// double variable for tryparse
+        /// </summary>
         protected double doubleCheck;
         private static Controller controller = new Controller();
+        /// <summary>
+        /// 
+        /// </summary>
         public Transfer()
         {
             InitializeComponent();
@@ -35,6 +45,7 @@ namespace BIT706_A2_PartA
 
         private void confirmTransferButton_Click(object sender, EventArgs e)
         {
+            //check whether the input is valid and then transfers the amount to the other account
             if (transferAmountTextBox.Text.Equals("") || transferAmountTextBox.Text.Length == 0)
             {
                 MessageBox.Show("Please put in an amount first to\ntransfer to the other selected account");
@@ -57,10 +68,14 @@ namespace BIT706_A2_PartA
             }
             else
             {
+                //minus the input to the selected accounts balance
                 controller.editAccountBalance(AllCustomers.selectedCustomer, AllCustomers.selectedCustomer.customerAccountsList[transferFromListBox.SelectedIndex], -double.Parse(transferAmountTextBox.Text));
+                //updates the listbox correctly
                 transferFromListBox.Items[transferFromListBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, transferFromListBox.SelectedIndex);
                 transferToListBox.Items[transferFromListBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, transferFromListBox.SelectedIndex);
+                //adds the input to the other selected accounts balance
                 controller.editAccountBalance(AllCustomers.selectedCustomer, AllCustomers.selectedCustomer.customerAccountsList[transferToListBox.SelectedIndex], double.Parse(transferAmountTextBox.Text));
+                //updates the listbox correctly
                 transferToListBox.Items[transferToListBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, transferToListBox.SelectedIndex);
                 transferFromListBox.Items[transferToListBox.SelectedIndex] = controller.accountString(AllCustomers.selectedCustomer.customerAccountsList, transferToListBox.SelectedIndex);
             }

@@ -22,6 +22,7 @@ namespace BIT706_A2_PartA
 
         private void buttonToCustomers_Click(object sender, EventArgs e)
         {
+            //deserializes the customer objects in the file and adds it to the listbox as well as the allcustomers list
             controller.getSerializer().deSerializing();
             this.Hide();
             controller.allCustomerGUI();

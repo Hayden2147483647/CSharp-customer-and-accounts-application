@@ -138,7 +138,13 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
+        /// <summary>
+        /// 
+        /// </summary>
         public System.Windows.Forms.ListBox transferFromListBox;
+        /// <summary>
+        /// 
+        /// </summary>
         public System.Windows.Forms.ListBox transferToListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

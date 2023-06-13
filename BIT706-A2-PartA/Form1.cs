@@ -14,7 +14,6 @@ namespace BIT706_A2_PartA
     public partial class AllCustomers : Form
     {
         private static Controller control = new Controller();
-        static int intCheck;
         private bool editButtonClicked = false;
         public List<Customer> allCustomersList = new List<Customer>();
         public static Customer selectedCustomer;
@@ -45,12 +44,14 @@ namespace BIT706_A2_PartA
             editButtonClicked = false;
             try
             {
+                //Checks input is not blank
                 if (nameInput.Text.Length == 0)
                 {
                     MessageBox.Show("Please make sure Name input is not blank");
                 }
                 else
                 {
+                    //adds the customer to the listbox and to the customer list
                     Customer customerInput = control.addCustomer(nameInput.Text.ToString());
                     allCustomerslistBox.Items.Add(control.customerString(customerInput));
                     nameInput.Text = "";
@@ -64,6 +65,7 @@ namespace BIT706_A2_PartA
 
         private void deleteCustomerButton_Click(object sender, EventArgs e)
         {
+            //Make sures that the listbox selection is not blank
             if (allCustomerslistBox.SelectedIndex == -1)
             {
                 MessageBox.Show("Please sselect a customer to delete first");
@@ -72,6 +74,7 @@ namespace BIT706_A2_PartA
             {
                 try
                 {
+                    //removes selected customer form the customer list and the list box
                     Customer cust;
                     cust = allCustomersList[allCustomerslistBox.SelectedIndex];
                     //Updates and displays all customers in the list to the list box
@@ -79,6 +82,7 @@ namespace BIT706_A2_PartA
                     control.removeCustomer(cust);
                     editButtonClicked = false;
                 }
+                //This catch is for the serialized binary file
                 catch (ArgumentOutOfRangeException except)
                 {
                     MessageBox.Show("No Customer present");
@@ -111,6 +115,7 @@ namespace BIT706_A2_PartA
             //throw exception here for selected index is out of range, since it was deleted
             try
             {
+                //acceptable messages if listbox selection is not assigned to any customer
                 if (allCustomerslistBox.SelectedIndex == -1)
                 {
                     if (editButtonClicked == true)
@@ -123,6 +128,7 @@ namespace BIT706_A2_PartA
                         nameInput.Text = "";
                     }
                 }
+                //Will show the customer's name on selection
                 else
                 {
                     custom = allCustomersList[allCustomerslistBox.SelectedIndex];
@@ -130,6 +136,7 @@ namespace BIT706_A2_PartA
                     selectedCustomer = allCustomersList[allCustomerslistBox.SelectedIndex];
                 }
             }
+            //This catch is for the serialized binary file
             catch (ArgumentOutOfRangeException exc)
             {
                 MessageBox.Show("No Customers present");
