@@ -1,4 +1,4 @@
-# BIT706-A3
+Customer accounts application
 User Guide
 
 The overview of this application is to add customers information to the bank allowing them to edit their name. Each customer can create, edit, and delete accounts that will be associated with them allowing them to withdraw and deposit from an account as well as transfer money over to another account.
